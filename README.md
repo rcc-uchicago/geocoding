@@ -8,6 +8,7 @@ Parmanand Sinha, Computational Scientist, Research computing center
 
  
 
-
+Resources
+OSM’s [Nominatim](https://operations.osmfoundation.org/policies/nominatim/) service 
 
 
