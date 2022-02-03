@@ -9,7 +9,7 @@ p_load(tmaptools)
 setwd("F:\\GitHub\\geocoding")
 
 #gkey = "AIzaSyCa9_mrD7EwhR5MUJx_uX62O0CiXoVLUaw"
-
+gkey = "AIzaSyAUNVqt1iyBAk_kUuToHqxc5sXx2ZejvOk"
 # save api key
 register_google(key = gkey)
 
@@ -32,8 +32,8 @@ osmcode<-geocode_OSM(data[,"addr"])
 cmbdloc<-  merge(gcode, osmcode[,(1:3)], by.x="addr", by.y = "query", all.x = T, suffixes = c(".google", ".osm"))
 
 #read the RCC geocoder file and merge it
-esrigc<-read.csv("us_address_-_Copy_1558387447_geocoded.csv")
-cmbdloc<- merge(cmbdloc, esrigc[, c(1,5:7)], by="ADDRESS")
+esrigc<-read.csv("address_1643749650_geocoded.csv")
+cmbdloc<- merge(cmbdloc, esrigc[, c(1,2:4)], by.x = "addr", by.y ="ADDRESS" )
 
 
 #create a function to calculate distance between lat and long
